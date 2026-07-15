@@ -103,10 +103,10 @@ function RealisticEarth() {
 
   return (
     <group 
-      position={isMobile ? [2.5, 0, -5] : [5.8, 0, -4]} 
-      scale={isMobile ? [2.2, 2.2, 2.2] : [3.5, 3.5, 3.5]}
+      position={isMobile ? [3.5, 0, -5] : [5.8, 0, -4]} 
+      scale={isMobile ? [2.45, 2.45, 2.45] : [3.5, 3.5, 3.5]}
     >
-      {/* Reduced scale to 70% and pushed further right so ~35-40% is visible */}
+      {/* Reduced scale to 70% (2.45) and pushed further right so ~35-40% is visible */}
       {/* Earth Body */}
       <mesh ref={earthRef}>
         <sphereGeometry args={[1, 64, 64]} />

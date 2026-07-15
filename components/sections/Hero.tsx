@@ -58,7 +58,7 @@ export default function Hero() {
         - w-[30vw] ensures the physical box doesn't push into the text container.
       */}
       <motion.div 
-        className="absolute left-[-60px] lg:left-[-120px] bottom-0 lg:bottom-[60px] w-[50vw] lg:w-[30vw] min-w-[250px] lg:min-w-[400px] h-[50vh] lg:h-[85vh] z-[5] pointer-events-none select-none flex items-end justify-start origin-bottom-left scale-[1.2] lg:scale-[1.9] opacity-40 lg:opacity-100"
+        className="absolute left-[-30px] lg:left-[-120px] bottom-[-20px] lg:bottom-[60px] w-[40vw] lg:w-[30vw] min-w-[180px] lg:min-w-[400px] h-[40vh] lg:h-[85vh] z-[5] pointer-events-none select-none flex items-end justify-start origin-bottom-left scale-[1.3] lg:scale-[1.9] opacity-60 lg:opacity-100"
         style={{ x: parallaxX, y: parallaxY }}
         animate={{ y: [0, -15, 0] }} // Subtle floating animation
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
@@ -71,8 +71,8 @@ export default function Hero() {
       </motion.div>
 
       {/* LAYOUT CONTAINER: Dynamic Flexbox layout to center content within available space */}
-      {/* 96px top padding on mobile = 72px navbar + 24px safe area */}
-      <div className="relative z-[20] w-full flex-1 flex flex-col lg:flex-row items-center justify-start lg:justify-between pt-[96px] lg:pt-0">
+      {/* 96px top padding on mobile = 64px navbar + 32px gap + safe area */}
+      <div className="relative z-[20] w-full flex-1 flex flex-col lg:flex-row items-center justify-start lg:justify-center pt-[calc(64px_+_env(safe-area-inset-top)_+_32px)] pb-12 lg:pt-0 lg:pb-0">
         
         {/* LEFT SPACER: Reserves structural space for the absolutely positioned astronaut */}
         <div className="hidden lg:block w-[calc(30vw-120px)] shrink-0" />
@@ -161,10 +161,10 @@ export default function Hero() {
           QUICK ACCESS
         </motion.div>
 
-        {/* Quick Access Cards (4 Columns x 2 Rows) */}
+        {/* Quick Access Cards (1 Column on Mobile, 4 Columns on Desktop) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.0 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 w-full max-w-[1000px] mx-auto pb-10 px-2 lg:px-0"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 w-full max-w-[1000px] mx-auto pb-10 px-4 lg:px-0"
         >
           {[
             { label: "About Club", icon: Users, href: "#about" },
