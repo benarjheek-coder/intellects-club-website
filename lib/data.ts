@@ -294,7 +294,7 @@ export const ALUMNI_DATA = [
   {
     category: "Social Media",
     members: [
-      { name: "Yashmit Rai", role: "Social Media Lead", image: "https://ui-avatars.com/api/?name=Yashmit+Rai&background=8B5CF6&color=fff&size=512" },
+      { name: "Yashmit Rai", role: "Social Media Lead", image: "/images/alumni/yashmit-rai.jpg" },
       { name: "Yuvraj Singh", role: "Social Media Co-Lead", image: "/images/alumni/yuvraj-singh.jpg" },
     ],
   },
