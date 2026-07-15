@@ -42,7 +42,7 @@ export default function Hero() {
     <section
       id="home"
       ref={containerRef}
-      className="relative z-0 min-h-screen flex flex-col justify-center overflow-hidden bg-[#05060B]"
+      className="relative z-0 min-h-screen flex flex-col justify-start lg:justify-center overflow-hidden bg-[#05060B]"
       aria-label="Hero section"
     >
       {/* 3D Cinematic Deep Space sequence (Earth on the right) */}
@@ -71,7 +71,8 @@ export default function Hero() {
       </motion.div>
 
       {/* LAYOUT CONTAINER: Dynamic Flexbox layout to center content within available space */}
-      <div className="relative z-[20] w-full h-full flex flex-col lg:flex-row items-center justify-between pt-[140px] md:pt-[160px] lg:pt-0">
+      {/* 96px top padding on mobile = 72px navbar + 24px safe area */}
+      <div className="relative z-[20] w-full flex-1 flex flex-col lg:flex-row items-center justify-start lg:justify-between pt-[96px] lg:pt-0">
         
         {/* LEFT SPACER: Reserves structural space for the absolutely positioned astronaut */}
         <div className="hidden lg:block w-[calc(30vw-120px)] shrink-0" />
@@ -79,7 +80,7 @@ export default function Hero() {
         {/* CENTER CONTENT: Typography and UI */}
         <motion.div
           style={{ y: scrollY, opacity, x: useTransform(parallaxX, x => x * -0.5) }} // Subtle counter parallax
-          className="flex-1 flex flex-col items-center justify-center px-[20px] lg:px-[120px] max-w-[1200px]"
+          className="w-full flex-1 flex flex-col items-center justify-start lg:justify-center px-[20px] lg:px-[120px] max-w-[1200px]"
         >
           {/* Top Badge */}
         <motion.div
