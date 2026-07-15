@@ -143,24 +143,22 @@ export default function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[32px] mb-[100px] w-full">
           
           {/* ================= CARD 1: EMAIL ================= */}
-          <ScrollReveal direction="up" delay={0.1} className="h-full">
+          <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }} className="h-full">
             <TiltCard glowColor="from-purple-600 to-cyan-600">
               <div className="relative p-[1.5px] rounded-[30px] overflow-hidden h-full group/frame z-0 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
-                {/* Full Animated Border */}
-                <div className="absolute inset-[-100%] bg-[conic-gradient(from_0deg,#a855f7_0deg,#22d3ee_90deg,#3b82f6_180deg,#ec4899_270deg,#a855f7_360deg)] animate-[spin_4s_linear_infinite] opacity-50 group-hover/frame:opacity-100 transition-opacity duration-700" style={{ transform: "translateZ(0)", willChange: "transform, opacity" }} />
+                {/* Full Static Border */}
+                <div className="absolute inset-[-100%] bg-[conic-gradient(from_0deg,#a855f7_0deg,#22d3ee_90deg,#3b82f6_180deg,#ec4899_270deg,#a855f7_360deg)] opacity-50 group-hover/frame:opacity-100 transition-opacity duration-700" style={{ transform: "translateZ(0)", willChange: "transform, opacity" }} />
                 
                 {/* Inner Card (Glassmorphism & Border) */}
                 <div className="relative h-full min-h-[320px] bg-[#0f1423]/85 backdrop-blur-2xl rounded-[28.5px] border-[1.5px] border-white/15 p-[36px] flex flex-col justify-between z-10 overflow-hidden transition-colors duration-700 group-hover/frame:bg-[#13192c]/90 gap-[20px]">
                   
-                  {/* Sweep Animation & Hover Glow */}
-                  <motion.div animate={{ x: ["-100%", "200%"] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} className="absolute top-0 left-0 w-[200%] h-full bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none -skew-x-12 z-0" />
                   <div className="absolute inset-0 bg-purple-500/10 opacity-0 group-hover/frame:opacity-100 transition-opacity duration-700 blur-[80px] z-0 pointer-events-none" />
 
                   {/* TOP */}
                   <div className="flex flex-col items-start gap-4 relative z-10 w-full">
-                    <motion.div whileInView={{ y: [-2, 2, -2] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="w-16 h-16 rounded-full bg-purple-500/20 border border-purple-400/40 flex items-center justify-center shadow-[0_0_20px_rgba(168,85,247,0.4)]">
+                    <div className="w-16 h-16 rounded-full bg-purple-500/20 border border-purple-400/40 flex items-center justify-center shadow-[0_0_20px_rgba(168,85,247,0.4)]">
                       <Mail className="w-7 h-7 text-purple-200" style={{ filter: "drop-shadow(0 0 10px rgba(216,180,254,0.8))" }} />
-                    </motion.div>
+                    </div>
                     <h3 className="text-[32px] font-bold text-white leading-none tracking-tight">EMAIL</h3>
                     <p className="text-[18px] text-gray-400 leading-snug">For collaborations, club activities, and workshops.</p>
                   </div>
@@ -183,23 +181,22 @@ export default function Contact() {
                 </div>
               </div>
             </TiltCard>
-          </ScrollReveal>
+          </motion.div>
 
           {/* ================= CARD 2: PHONE ================= */}
-          <ScrollReveal direction="up" delay={0.2} className="h-full">
+          <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }} className="h-full">
             <TiltCard glowColor="from-cyan-600 to-blue-600">
               <div className="relative p-[1.5px] rounded-[30px] overflow-hidden h-full group/frame z-0 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
-                <div className="absolute inset-[-100%] bg-[conic-gradient(from_0deg,#a855f7_0deg,#22d3ee_90deg,#3b82f6_180deg,#ec4899_270deg,#a855f7_360deg)] animate-[spin_4s_linear_infinite_reverse] opacity-50 group-hover/frame:opacity-100 transition-opacity duration-700" style={{ transform: "translateZ(0)", willChange: "transform, opacity" }} />
+                <div className="absolute inset-[-100%] bg-[conic-gradient(from_0deg,#a855f7_0deg,#22d3ee_90deg,#3b82f6_180deg,#ec4899_270deg,#a855f7_360deg)] opacity-50 group-hover/frame:opacity-100 transition-opacity duration-700" style={{ transform: "translateZ(0)", willChange: "transform, opacity" }} />
                 
                 <div className="relative h-full min-h-[320px] bg-[#0f1423]/85 backdrop-blur-2xl rounded-[28.5px] border-[1.5px] border-white/15 p-[36px] flex flex-col justify-between z-10 overflow-hidden transition-colors duration-700 group-hover/frame:bg-[#13192c]/90 gap-[20px]">
                   
-                  <motion.div animate={{ x: ["-100%", "200%"] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute top-0 left-0 w-[200%] h-full bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none -skew-x-12 z-0" />
                   <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover/frame:opacity-100 transition-opacity duration-700 blur-[80px] z-0 pointer-events-none" />
 
                   <div className="flex flex-col items-start gap-4 relative z-10 w-full">
-                    <motion.div whileInView={{ y: [-2, 2, -2] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="w-16 h-16 rounded-full bg-blue-500/20 border border-blue-400/40 flex items-center justify-center shadow-[0_0_20px_rgba(59,130,246,0.4)]">
+                    <div className="w-16 h-16 rounded-full bg-blue-500/20 border border-blue-400/40 flex items-center justify-center shadow-[0_0_20px_rgba(59,130,246,0.4)]">
                       <PhoneCall className="w-7 h-7 text-blue-200" style={{ filter: "drop-shadow(0 0 10px rgba(147,197,253,0.8))" }} />
-                    </motion.div>
+                    </div>
                     <h3 className="text-[32px] font-bold text-white leading-none tracking-tight">PRESIDENT</h3>
                     <p className="text-[18px] text-gray-400 leading-snug">Contact Karthik S for immediate assistance.</p>
                   </div>
@@ -220,23 +217,22 @@ export default function Contact() {
                 </div>
               </div>
             </TiltCard>
-          </ScrollReveal>
+          </motion.div>
 
           {/* ================= CARD 3: LOCATION ================= */}
-          <ScrollReveal direction="up" delay={0.1} className="h-full">
+          <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }} className="h-full">
             <TiltCard glowColor="from-blue-600 to-pink-600">
               <div className="relative p-[1.5px] rounded-[30px] overflow-hidden h-full group/frame z-0 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
-                <div className="absolute inset-[-100%] bg-[conic-gradient(from_0deg,#a855f7_0deg,#22d3ee_90deg,#3b82f6_180deg,#ec4899_270deg,#a855f7_360deg)] animate-[spin_4s_linear_infinite] opacity-50 group-hover/frame:opacity-100 transition-opacity duration-700" style={{ transform: "translateZ(0)", willChange: "transform, opacity" }} />
+                <div className="absolute inset-[-100%] bg-[conic-gradient(from_0deg,#a855f7_0deg,#22d3ee_90deg,#3b82f6_180deg,#ec4899_270deg,#a855f7_360deg)] opacity-50 group-hover/frame:opacity-100 transition-opacity duration-700" style={{ transform: "translateZ(0)", willChange: "transform, opacity" }} />
                 
                 <div className="relative h-full min-h-[320px] bg-[#0f1423]/85 backdrop-blur-2xl rounded-[28.5px] border-[1.5px] border-white/15 p-[36px] flex flex-col justify-between z-10 overflow-hidden transition-colors duration-700 group-hover/frame:bg-[#13192c]/90 gap-[20px]">
                   
-                  <motion.div animate={{ x: ["-100%", "200%"] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }} className="absolute top-0 left-0 w-[200%] h-full bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none -skew-x-12 z-0" />
                   <div className="absolute inset-0 bg-cyan-500/10 opacity-0 group-hover/frame:opacity-100 transition-opacity duration-700 blur-[80px] z-0 pointer-events-none" />
 
                   <div className="flex flex-col items-start gap-4 relative z-10 w-full">
-                    <motion.div whileInView={{ y: [-2, 2, -2] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }} className="w-16 h-16 rounded-full bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center shadow-[0_0_20px_rgba(6,182,212,0.4)]">
+                    <div className="w-16 h-16 rounded-full bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center shadow-[0_0_20px_rgba(6,182,212,0.4)]">
                       <MapPin className="w-7 h-7 text-cyan-200" style={{ filter: "drop-shadow(0 0 10px rgba(103,232,249,0.8))" }} />
-                    </motion.div>
+                    </div>
                     <h3 className="text-[32px] font-bold text-white leading-none tracking-tight">CAMPUS</h3>
                     <p className="text-[18px] text-gray-400 leading-snug">SRM Institute of Science & Technology.</p>
                   </div>
@@ -254,23 +250,22 @@ export default function Contact() {
                 </div>
               </div>
             </TiltCard>
-          </ScrollReveal>
+          </motion.div>
 
           {/* ================= CARD 4: SOCIAL ================= */}
-          <ScrollReveal direction="up" delay={0.2} className="h-full">
+          <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }} className="h-full">
             <TiltCard glowColor="from-pink-600 to-purple-600">
               <div className="relative p-[1.5px] rounded-[30px] overflow-hidden h-full group/frame z-0 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
-                <div className="absolute inset-[-100%] bg-[conic-gradient(from_0deg,#a855f7_0deg,#22d3ee_90deg,#3b82f6_180deg,#ec4899_270deg,#a855f7_360deg)] animate-[spin_4s_linear_infinite_reverse] opacity-50 group-hover/frame:opacity-100 transition-opacity duration-700" style={{ transform: "translateZ(0)", willChange: "transform, opacity" }} />
+                <div className="absolute inset-[-100%] bg-[conic-gradient(from_0deg,#a855f7_0deg,#22d3ee_90deg,#3b82f6_180deg,#ec4899_270deg,#a855f7_360deg)] opacity-50 group-hover/frame:opacity-100 transition-opacity duration-700" style={{ transform: "translateZ(0)", willChange: "transform, opacity" }} />
                 
                 <div className="relative h-full min-h-[320px] bg-[#0f1423]/85 backdrop-blur-2xl rounded-[28.5px] border-[1.5px] border-white/15 p-[36px] flex flex-col justify-between z-10 overflow-hidden transition-colors duration-700 group-hover/frame:bg-[#13192c]/90 gap-[20px]">
                   
-                  <motion.div animate={{ x: ["-100%", "200%"] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 3 }} className="absolute top-0 left-0 w-[200%] h-full bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none -skew-x-12 z-0" />
                   <div className="absolute inset-0 bg-pink-500/10 opacity-0 group-hover/frame:opacity-100 transition-opacity duration-700 blur-[80px] z-0 pointer-events-none" />
 
                   <div className="flex flex-col items-start gap-4 relative z-10 w-full">
-                    <motion.div whileInView={{ y: [-2, 2, -2] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 3 }} className="w-16 h-16 rounded-full bg-pink-500/20 border border-pink-400/40 flex items-center justify-center shadow-[0_0_20px_rgba(236,72,153,0.4)]">
+                    <div className="w-16 h-16 rounded-full bg-pink-500/20 border border-pink-400/40 flex items-center justify-center shadow-[0_0_20px_rgba(236,72,153,0.4)]">
                       <Globe className="w-7 h-7 text-pink-200" style={{ filter: "drop-shadow(0 0 10px rgba(244,114,182,0.8))" }} />
-                    </motion.div>
+                    </div>
                     <h3 className="text-[32px] font-bold text-white leading-none tracking-tight">SOCIALS</h3>
                     <p className="text-[18px] text-gray-400 leading-snug">Follow Intellects Club for latest updates.</p>
                   </div>
@@ -293,7 +288,7 @@ export default function Contact() {
                 </div>
               </div>
             </TiltCard>
-          </ScrollReveal>
+          </motion.div>
         </div>
       </div>
     </section>
