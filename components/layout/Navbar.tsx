@@ -68,7 +68,7 @@ export default function Navbar() {
             scrolled ? "max-w-full" : "max-w-[1400px]"
           }`}
           style={{
-            height: scrolled ? "72px" : "80px",
+            height: scrolled ? "64px" : "72px", // Reduced height for mobile optimization
             backgroundColor: scrolled ? "rgba(10,10,18,0.95)" : "rgba(15,15,25,0.55)",
             backdropFilter: scrolled ? "blur(30px)" : "blur(20px)",
             borderTop: scrolled ? "none" : "1px solid rgba(255,255,255,0.12)",
@@ -79,20 +79,20 @@ export default function Navbar() {
             boxShadow: scrolled
               ? "0 10px 30px rgba(0,0,0,0.5)"
               : "0 0 30px rgba(124,58,237,0.15)",
-            padding: scrolled ? "0 32px" : "0 24px",
+            padding: scrolled ? "0 20px md:0 32px" : "0 16px md:0 24px",
           }}
         >
           {/* Logo */}
           <button
             onClick={() => handleNavClick("#home")}
-            className="flex items-center gap-4 group"
+            className="flex items-center gap-3 md:gap-4 group"
             aria-label="Intellects Club — back to top"
           >
-            <div className="relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center flex-shrink-0 overflow-hidden rounded-xl bg-white/5 border border-white/10 group-hover:border-purple-500/50 transition-colors">
+            <div className="relative w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 flex items-center justify-center flex-shrink-0 overflow-hidden rounded-xl bg-white/5 border border-white/10 group-hover:border-purple-500/50 transition-colors">
                <img src="/images/logo.jpg" alt="Intellects Club Logo" className="object-contain w-full h-full scale-150" />
             </div>
             <span
-              className="font-bold text-xl text-white tracking-wide"
+              className="font-bold text-lg md:text-xl text-white tracking-wide flex items-center"
               style={{ fontFamily: "var(--font-space-grotesk)" }}
             >
               Intellects
@@ -146,7 +146,7 @@ export default function Navbar() {
 
             <button
               onClick={() => setMobileOpen(true)}
-              className="lg:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+              className="lg:hidden p-3 md:p-2 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition-colors flex items-center justify-center min-w-[44px] min-h-[44px]"
               aria-label="Open mobile menu"
             >
               <Menu className="w-6 h-6" />

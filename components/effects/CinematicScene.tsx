@@ -759,12 +759,12 @@ export default function CinematicScene({ onComplete }: { onComplete: () => void 
             </div>
 
             <h1
-              className="text-5xl md:text-7xl font-black text-white tracking-[0.3em] mb-4 drop-shadow-[0_0_50px_rgba(255,255,255,1)]"
+              className="text-3xl sm:text-5xl md:text-7xl font-black text-white tracking-widest md:tracking-[0.3em] mb-4 drop-shadow-[0_0_50px_rgba(255,255,255,1)] text-center w-full px-4 break-words"
               style={{ fontFamily: "var(--font-space-grotesk)" }}
             >
               INTELLECTS CLUB
             </h1>
-            <p className="text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-400 font-bold tracking-[0.4em] uppercase drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">
+            <p className="text-sm sm:text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-400 font-bold tracking-[0.2em] md:tracking-[0.4em] uppercase drop-shadow-[0_0_20px_rgba(255,255,255,0.5)] text-center px-4">
               Revamping Tech
             </p>
           </motion.div>

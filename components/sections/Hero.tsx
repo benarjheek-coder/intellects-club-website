@@ -71,7 +71,7 @@ export default function Hero() {
       </motion.div>
 
       {/* LAYOUT CONTAINER: Dynamic Flexbox layout to center content within available space */}
-      <div className="relative z-[20] w-full h-full flex flex-col lg:flex-row items-center justify-between pt-[100px] lg:pt-0">
+      <div className="relative z-[20] w-full h-full flex flex-col lg:flex-row items-center justify-between pt-[140px] md:pt-[160px] lg:pt-0">
         
         {/* LEFT SPACER: Reserves structural space for the absolutely positioned astronaut */}
         <div className="hidden lg:block w-[calc(30vw-120px)] shrink-0" />
@@ -132,7 +132,7 @@ export default function Hero() {
         {/* Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14 w-full px-4 sm:px-0"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14 w-[90%] sm:w-full max-w-[320px] sm:max-w-none mx-auto"
         >
           <a
             href="#about"
@@ -178,15 +178,15 @@ export default function Hero() {
             <a
               key={btn.label}
               href={btn.href}
-              className="group flex items-center justify-between px-4 py-3.5 rounded-xl bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.08)] hover:border-[#8B5CF6]/50 hover:bg-[rgba(255,255,255,0.06)] transition-all duration-300 backdrop-blur-lg hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(139,92,246,0.15)]"
+              className="group flex items-center justify-between px-3 sm:px-4 py-3.5 rounded-xl bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.08)] hover:border-[#8B5CF6]/50 hover:bg-[rgba(255,255,255,0.06)] transition-all duration-300 backdrop-blur-lg hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(139,92,246,0.15)] overflow-hidden"
             >
-              <div className="flex items-center gap-3">
-                <btn.icon className="w-[18px] h-[18px] text-[#A855F7]" />
-                <span className="font-medium text-[13px] text-gray-200 group-hover:text-white transition-colors">
+              <div className="flex items-center gap-2 sm:gap-3 overflow-hidden">
+                <btn.icon className="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] text-[#A855F7] shrink-0" />
+                <span className="font-medium text-xs sm:text-[13px] text-gray-200 group-hover:text-white transition-colors truncate">
                   {btn.label}
                 </span>
               </div>
-              <ChevronRight className="w-4 h-4 text-gray-600 group-hover:text-[#A855F7] group-hover:translate-x-0.5 transition-all" />
+              <ChevronRight className="w-4 h-4 text-gray-600 group-hover:text-[#A855F7] group-hover:translate-x-0.5 transition-all shrink-0" />
             </a>
           ))}
         </motion.div>
