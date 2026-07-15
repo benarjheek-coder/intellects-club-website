@@ -71,8 +71,8 @@ export default function Hero() {
       </motion.div>
 
       {/* LAYOUT CONTAINER: Dynamic Flexbox layout to center content within available space */}
-      {/* 96px top padding on mobile = 64px navbar + 32px gap + safe area */}
-      <div className="relative z-[20] w-full flex-1 flex flex-col lg:flex-row items-center justify-start lg:justify-center pt-safe-hero pb-12 lg:pt-0 lg:pb-0">
+      {/* 120px top padding guarantees it clears the 64px navbar + safe area entirely */}
+      <div className="relative z-[20] w-full flex-1 flex flex-col lg:flex-row items-center justify-start lg:justify-center pt-[120px] pb-12 lg:pt-0 lg:pb-0">
         
         {/* LEFT SPACER: Reserves structural space for the absolutely positioned astronaut */}
         <div className="hidden lg:block w-[calc(30vw-120px)] shrink-0" />
