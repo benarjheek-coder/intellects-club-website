@@ -103,10 +103,10 @@ function RealisticEarth() {
 
   return (
     <group 
-      position={isMobile ? [2.8, 0, -5] : [5.8, 0, -4]} 
+      position={isMobile ? [4.5, 0, -5] : [5.8, 0, -4]} 
       scale={[3.5, 3.5, 3.5]}
     >
-      {/* Earth remains huge on mobile, brought into the narrow mobile frustum (x=2.8) so ~40% is visible on the right */}
+      {/* Earth pushed to x=4.5 so exactly ~35-45% of it peeks from the right edge on mobile screens */}
       {/* Earth Body */}
       <mesh ref={earthRef}>
         <sphereGeometry args={[1, 64, 64]} />

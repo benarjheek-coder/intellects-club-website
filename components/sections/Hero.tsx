@@ -71,8 +71,7 @@ export default function Hero() {
       </motion.div>
 
       {/* LAYOUT CONTAINER: Dynamic Flexbox layout to center content within available space */}
-      {/* 120px top padding guarantees it clears the 64px navbar + safe area entirely */}
-      <div className="relative z-[20] w-full flex-1 flex flex-col lg:flex-row items-center justify-start lg:justify-center pt-[120px] pb-12 lg:pt-0 lg:pb-0">
+      <div className="relative z-[20] w-full flex-1 flex flex-col lg:flex-row items-center justify-start lg:justify-center pb-12 lg:pb-0">
         
         {/* LEFT SPACER: Reserves structural space for the absolutely positioned astronaut */}
         <div className="hidden lg:block w-[calc(30vw-120px)] shrink-0" />
@@ -87,7 +86,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="inline-flex items-center gap-2 mb-6"
+          className="inline-flex items-center gap-2 mb-6 mt-[120px] lg:mt-0"
         >
           <span className="flex items-center gap-2 px-5 py-2 rounded-full text-[13px] font-medium tracking-wide bg-white/5 border border-white/10 text-gray-300 backdrop-blur-md shadow-lg">
             <span className="w-1.5 h-1.5 rounded-full bg-[#8B5CF6] shadow-[0_0_8px_#8B5CF6]" />
