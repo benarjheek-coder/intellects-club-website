@@ -11,7 +11,7 @@ const EMAIL = "karthik.santhanam2007@gmail.com";
 const PHONE = "+91 63741 62898";
 const PHONE_CLEAN = "+916374162898";
 const WHATSAPP_LINK = "https://wa.me/916374162898";
-const MAPS_LINK = "https://maps.google.com";
+const MAPS_LINK = "https://maps.app.goo.gl/JkKF19CYAaTxRSF6A";
 const INSTA_LINK = "https://www.instagram.com/intellects_srmramapuram/";
 const LINKEDIN_LINK = "https://www.linkedin.com/company/intellectsclub-srm-ramapuram/";
 
