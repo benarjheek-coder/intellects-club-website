@@ -42,7 +42,7 @@ export default function Hero() {
     <section
       id="home"
       ref={containerRef}
-      className="relative z-0 min-h-screen flex flex-col justify-start lg:justify-center overflow-hidden bg-[#05060B]"
+      className="relative z-0 min-h-screen flex flex-col justify-start lg:justify-center overflow-hidden bg-[#05060B] pt-[110px] lg:pt-0"
       aria-label="Hero section"
     >
       {/* 3D Cinematic Deep Space sequence (Earth on the right) */}
@@ -160,10 +160,10 @@ export default function Hero() {
           QUICK ACCESS
         </motion.div>
 
-        {/* Quick Access Cards (1 Column on Mobile, 4 Columns on Desktop) */}
+        {/* Quick Access Cards (2 Columns on Mobile to save height, 4 on Desktop) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.0 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 w-full max-w-[1000px] mx-auto pb-10 px-4 lg:px-0"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 w-full max-w-[1000px] mx-auto pb-10 px-4 lg:px-0"
         >
           {[
             { label: "About Club", icon: Users, href: "#about" },
