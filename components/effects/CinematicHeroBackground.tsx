@@ -89,6 +89,9 @@ function RealisticEarth() {
     });
   }, [dayMap, nightMap, bumpMap, specularMap]);
 
+  const { size } = useThree();
+  const isMobile = size.width < 768;
+  
   useFrame((state, delta) => {
     if (earthRef.current) {
       earthRef.current.rotation.y += delta * 0.015; // Slow cinematic rotation
@@ -99,7 +102,10 @@ function RealisticEarth() {
   });
 
   return (
-    <group position={[5.8, 0, -4]} scale={[3.5, 3.5, 3.5]}>
+    <group 
+      position={isMobile ? [2.5, 0, -5] : [5.8, 0, -4]} 
+      scale={isMobile ? [2.2, 2.2, 2.2] : [3.5, 3.5, 3.5]}
+    >
       {/* Reduced scale to 70% and pushed further right so ~35-40% is visible */}
       {/* Earth Body */}
       <mesh ref={earthRef}>

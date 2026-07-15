@@ -58,7 +58,7 @@ export default function Hero() {
         - w-[30vw] ensures the physical box doesn't push into the text container.
       */}
       <motion.div 
-        className="absolute left-[-120px] bottom-[60px] w-[30vw] min-w-[400px] h-[85vh] z-[5] pointer-events-none select-none flex items-end justify-start origin-bottom-left scale-[1.9]"
+        className="absolute left-[-60px] lg:left-[-120px] bottom-0 lg:bottom-[60px] w-[50vw] lg:w-[30vw] min-w-[250px] lg:min-w-[400px] h-[50vh] lg:h-[85vh] z-[5] pointer-events-none select-none flex items-end justify-start origin-bottom-left scale-[1.2] lg:scale-[1.9] opacity-40 lg:opacity-100"
         style={{ x: parallaxX, y: parallaxY }}
         animate={{ y: [0, -15, 0] }} // Subtle floating animation
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
@@ -71,7 +71,7 @@ export default function Hero() {
       </motion.div>
 
       {/* LAYOUT CONTAINER: Dynamic Flexbox layout to center content within available space */}
-      <div className="relative z-[20] w-full h-full flex flex-row items-center justify-between">
+      <div className="relative z-[20] w-full h-full flex flex-col lg:flex-row items-center justify-between pt-[100px] lg:pt-0">
         
         {/* LEFT SPACER: Reserves structural space for the absolutely positioned astronaut */}
         <div className="hidden lg:block w-[calc(30vw-120px)] shrink-0" />
@@ -132,11 +132,11 @@ export default function Hero() {
         {/* Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14 w-full px-4 sm:px-0"
         >
           <a
             href="#about"
-            className="px-8 py-3.5 rounded-full font-bold text-white transition-all w-full sm:w-auto text-center"
+            className="px-8 py-4 sm:py-3.5 rounded-full font-bold text-white transition-all w-full sm:w-auto text-center flex items-center justify-center min-h-[50px]"
             style={{
               background: "linear-gradient(135deg, #8B5CF6, #A855F7)",
               boxShadow: "0 0 25px rgba(139,92,246,0.5)"
@@ -146,7 +146,7 @@ export default function Hero() {
           </a>
           <a
             href="#contact"
-            className="px-8 py-3.5 rounded-full font-bold text-white bg-white/5 border border-white/10 hover:bg-white/10 transition-all w-full sm:w-auto text-center backdrop-blur-md"
+            className="px-8 py-4 sm:py-3.5 rounded-full font-bold text-white bg-white/5 border border-white/10 hover:bg-white/10 transition-all w-full sm:w-auto text-center flex items-center justify-center min-h-[50px] backdrop-blur-md"
           >
             Join Community
           </a>
@@ -163,7 +163,7 @@ export default function Hero() {
         {/* Quick Access Cards (4 Columns x 2 Rows) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.0 }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-[1000px] mx-auto pb-10"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 w-full max-w-[1000px] mx-auto pb-10 px-2 lg:px-0"
         >
           {[
             { label: "About Club", icon: Users, href: "#about" },
